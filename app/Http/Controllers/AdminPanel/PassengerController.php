@@ -26,12 +26,20 @@ class PassengerController extends Controller
         $pass->arival_time=$request->input('arival_time');
         $pass->passenger_date=$request->input('passenger_date');
         $pass->save();
-        $request->session()->flash('msg','Data Submitted');
-        return redirect('passenger-info');
+        
+        if($pass->save())
+        {
+            $request->session()->flash('msg','Passenger Data Submitted');
+            return redirect('passenger-info');
+        }
+        else
+        {
+            $request->session()->flash('msg','Passenger Data Not Submitted');
+        }
+
+
+        
     }
 
-    // public function show_passengerlist(Request $request)
-    // {
-        
-    // }
+    
 }

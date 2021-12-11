@@ -30,3 +30,5 @@ Route::get('/passenger-info',[PassengerController:: class,'Passengers']);
 Route::get('/flight-info',[FlightController:: class,'Flight_info']);
 Route::get('/Ticket-info',[TicketController:: class,'Ticket_info']);
 Route::post('/pass_submit',[PassengerController:: class,'create_passengers']);
+Route::post('/flight_submit',[FlightController:: class,'create_flight']);
+Route::post('/Ticket_submit',[TicketController::class,'create_Ticket']);
