@@ -11,7 +11,8 @@ class FlightController extends Controller
 {
     public function Flight_info()
     {
-        return view('Front-End.flight');
+        $data=flight::all();
+        return view('Front-End.flight')->with('data',$data);
     }
 
 

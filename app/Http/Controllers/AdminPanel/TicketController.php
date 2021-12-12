@@ -10,7 +10,8 @@ class TicketController extends Controller
 {
     public function Ticket_info()
     {
-        return view('Front-End.Ticket');
+        $data=ticket::all();
+        return view('Front-End.Ticket')->with('data',$data);
     }
 
 

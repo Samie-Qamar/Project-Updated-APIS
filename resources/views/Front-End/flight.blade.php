@@ -67,6 +67,37 @@
 <button type="submit" class="btn btn-success">Save</button>
 </div>
 
+<table class="table table-bordered">
+
+<tr>
+<th>ID</th>    
+<th>FlightName</th>
+<th>PersonName</th>
+<th>Ticket NO</th>
+<th>Status</th>
+<th>From Destination</th>
+<th>To Destination</th>
+<th>Flight Timings</th>
+<th>Arrival Timings</th>
+<th>Action</th>
+<th>Action</th>
+</tr>
+@foreach($data as $value)
+<tr>
+<td>{{$value->id}}</td>
+<td>{{$value->FlightName}}</td>
+<td>{{$value->PersonName}}</td>
+<td>{{$value->Ticket_NO }}</td>
+<td>{{$value->Status}}</td>
+<td>{{$value->From_Destination}}</td>
+<td>{{$value->To_Destination}}</td>
+<td>{{$value->Flight_timings}}</td>
+<td>{{$value->Arrival_timings}}</td>
+<td><a href="Edit-flight/{{$value->id}}" class="btn btn-Primary">Edit Flight</a></td>
+<td><a href="Delete-flight/{{$value->id}}" class="btn btn-danger">Delete</a></td> --> -->
+</tr>
+@endforeach
+
 @endsection
 
 

@@ -11,7 +11,8 @@ class PassengerController extends Controller
 {
     public function Passengers()
     {
-        return view('Front-End.passenger');
+        $data=passenger::all();
+        return view('Front-End.passenger')->with('data',$data);
     }
 
 

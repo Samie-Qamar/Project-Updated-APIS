@@ -52,13 +52,36 @@
 <input type="Date" name="passenger_date" class="form-control" placeholder="Enter Date"/>    
 </div>       
 <br>
-<Button type="submit" class="btn btn-success">Save</Button>
-<br> 
+<div class="form-group">
+<button type="submit" class="btn btn-success">Save</button>
 </div>
-</div>    
-</div>
-
 </form>
 
-
+<table class="table table-bordered">
+<tr>
+<th>ID</th>    
+<th>passenger Name</th>
+<th>passengerNic</th>
+<th>contactno</th>
+<th>status</th>
+<th>DepartureTime</th>
+<th>arrivaltime</th>
+<th>passengerdate</th>
+<th>Action</th>
+<th>Action</th>
+</tr>
+@foreach($data as $value)
+<tr>    
+<td>{{$value->id}}</td>
+<td>{{$value->passenger_name}}</td>
+<td>{{$value->passenger_nic}}</td>
+<td>{{$value->contact_no}}</td>
+<td>{{$value->status}}</td>
+<td>{{$value->Departure_time}}</td>
+<td>{{$value->arival_time}}</td>
+<td>{{$value->passenger_date}}</td>
+<td><a href="Edit-passenger/{{$value->id}}" class="btn btn-Primary">Update</a></td>
+<td><a href="delete-passenger/{{$value->id}}" class="btn btn-danger">Delete</a></td>
+</tr>
+@endforeach
 @endsection
